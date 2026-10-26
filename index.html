@@ -76,18 +76,8 @@ body::after {
 .container { max-width: 1040px; margin: 0 auto; padding: 0 40px 120px; position: relative; z-index: 1; }
 
 .hero {
-  padding: 80px 0 64px;
+  padding: 96px 0 64px;
 }
-.status-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 13px; color: #059669;
-  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-  padding: 5px 14px; border-radius: 12px;
-  border: 1px solid rgba(5,150,105,0.15);
-  background: linear-gradient(135deg, rgba(5,150,105,0.08), rgba(5,150,105,0.04));
-  margin-bottom: 28px;
-}
-.status-dot { width: 7px; height: 7px; border-radius: 50%; background: #059669; box-shadow: 0 0 8px rgba(5,150,105,0.4); }
 .hero h1 {
   font-family: 'LXGW WenKai', 'Noto Serif SC', 'Noto Sans SC', serif;
   font-size: 56px;
@@ -336,6 +326,7 @@ body::after {
       <a href="#projects" class="nav-link" data-i18n="nav.projects">项目</a>
       <a href="#creative" class="nav-link" data-i18n="nav.creative">创作</a>
       <a href="#skills" class="nav-link" data-i18n="nav.skills">能力</a>
+      <a href="gallery.html" class="nav-link" data-i18n="nav.gallery">图册</a>
       <a href="#contact" class="nav-link" data-i18n="nav.contact">联系</a>
       <button class="lang-toggle active" onclick="setLang('zh')">中文</button>
       <button class="lang-toggle" onclick="setLang('en')">EN</button>
@@ -346,14 +337,10 @@ body::after {
 <div class="container">
 
   <div class="hero">
-    <div class="status-badge">
-      <span class="status-dot"></span>
-      <span data-i18n="status">一个月内到岗 · 深圳</span>
-    </div>
     <h1>阿金</h1>
-    <p class="sub" data-i18n="meta">19岁 · 独立开发者 · AI 应用方向 <span style="color:#a1a1aa">|</span> 高中休学自学编程</p>
+    <p class="sub" data-i18n="meta">独立开发者 · AI 应用方向</p>
     <p class="bio" data-i18n="bio">
-      半年间从零自学 <strong>Python</strong>，独立交付 4 个可运行项目：桌面端多平台私信聚合、本地 AI 桌宠（Windows + Android）、视频自动发布工具、DeepSeek 对话导出工具。关注 AI 在真实场景里的落地——折腾过 llama.cpp 本地推理、逆向过平台通信协议、用 CSS hack 绕过虚拟列表限制。也做过 AI 短剧、独立运营过 9 个平台的虚拟角色账号。不会背八股文，但能干活。
+      独立开发者，关注 AI 在真实场景里的落地。做过 4 个可运行的项目：桌面端多平台私信聚合、本地 AI 桌宠（Windows + Android）、视频自动发布工具、DeepSeek 对话导出工具。折腾过 <strong>llama.cpp</strong> 本地推理、逆向过平台通信协议、用 CSS hack 绕过虚拟列表限制。也做过 AI 短剧，独立运营过 9 个平台的虚拟角色账号。
     </p>
   </div>
 
@@ -509,7 +496,6 @@ body::after {
     <div class="pills-row">
       <span class="stack-text">Python · PySide6 · LangChain · Docker · SQLite · Playwright · C++ · Flask · Redis · Git · llama.cpp</span>
     </div>
-    </div>
   </div>
 
   <div class="section">
@@ -521,10 +507,6 @@ body::after {
       <div class="now-items">
         <div class="now-row">
           <span class="now-dot">&#9679;</span>
-          <span class="now-text" data-i18n="now.job">在深圳找 AI 应用开发 / Python 后端方向的全职机会</span>
-        </div>
-        <div class="now-row">
-          <span class="now-dot">&#9675;</span>
           <span class="now-text" data-i18n="now.tts">给 HickHole 的 Android 端加本地语音合成能力</span>
         </div>
         <div class="now-row">
@@ -542,18 +524,17 @@ body::after {
     </div>
     <div class="contact-row">
       <a href="https://github.com/Agying3" class="contact-link" target="_blank">GitHub · Agying3</a>
-      <a href="mailto:2127975080@qq.com" class="contact-link">2127975080@qq.com</a>
     </div>
   </div>
 
   <div class="footer">
-    <span data-i18n="footer">阿金 · 2026 · 深圳</span>
+    <span data-i18n="footer">阿金 · 2026</span>
   </div>
 
 </div>
 
 <script>
-const i18n={zh:{"nav.projects":"项目","nav.creative":"创作","nav.skills":"能力","nav.contact":"联系","status":"一个月内到岗 · 深圳","meta":'19岁 · 独立开发者 · AI 应用方向 <span style="color:#a1a1aa">|</span> 高中休学自学编程',"bio":'半年间从零自学 <strong>Python</strong>，独立交付 4 个可运行项目：桌面端多平台私信聚合、本地 AI 桌宠（Windows + Android）、视频自动发布工具、DeepSeek 对话导出工具。关注 AI 在真实场景里的落地——折腾过 llama.cpp 本地推理、逆向过平台通信协议、用 CSS hack 绕过虚拟列表限制。也做过 AI 短剧、独立运营过 9 个平台的虚拟角色账号。不会背八股文，但能干活。',"projects.title":"项目案例","projects.dmshoot":"多平台私信聚合桌面应用。接入 B站 + 抖音私信，集成 DeepSeek 多角色 AI 自动回复，SQLite WAL 五层防御保障消息持久化。","projects.hickhole":"本地 AI 像素桌宠。26 只机器人群体物理模拟，Windows 透明分层窗口 + Android APK 内置 llama.cpp JNI 本地推理。","projects.autosend":"多平台视频一键发布工具。Fork 上游项目后为其添加桌面 GUI、单文件 EXE 打包和可视化登录管理，覆盖 5 个平台。","projects.export":"DeepSeek 对话全量导出工具。CSS hack 欺骗 React 虚拟列表渲染全部 DOM，自动校验导出完整性。","creative.title":"创作 & 运营","creative.drama":"尘星计划 · AI 短剧","creative.drama_desc":"参与制作 AI 短剧《相亲迷局》，负责从剧本生成到成片的 AI 生产管线搭建，探索 AI 辅助内容创作的工业化流程。","creative.virtual":"虚拟角色跨平台运营","creative.virtual_desc":"独立运营 9 个视频平台的虚拟角色账号，覆盖国内外主流平台。从内容创作到 AI 私信回复全链路自动化。","skills.title":"核心能力","skills.py_desktop":"Python 桌面应用","skills.py_desktop_desc":"3 个 PySide6 项目从零到打包 EXE，含毛玻璃 UI、QThread 多线程、QPainter 手写图表。","skills.ai_agent":"AI Agent 开发","skills.ai_agent_desc":"LangChain + LangGraph Agent 架构，Qdrant 向量库，DeepSeek 多角色引擎，本地 llama.cpp 推理。","skills.docker":"Docker & 部署","skills.docker_desc":"Docker Compose 管理 Qdrant + AnythingLLM + Redis 容器，WSL2 生产环境部署，Dockerfile 多阶段构建。","skills.api":"多平台 API 对接","skills.api_desc":"抖音 Protobuf 协议解析，B站 HTTP 轮询，小红书签名逆向，Playwright 自动化扫码，插件化架构支持热插拔。","skills.side":"从 Python 桌面端，到 AI Agent 编排，到 Docker 部署，再到跨平台 API 对接——这四块拼在一起，就是我能独立交付的完整链路。","stack.title":"技术栈","now.title":"当前动态","now.job":"在深圳找 AI 应用开发 / Python 后端方向的全职机会","now.tts":"给 HickHole 的 Android 端加本地语音合成能力","now.writing":"把几个 PySide6 项目的研究过程整理成技术文章","contact.title":"联系","footer":"阿金 · 2026 · 深圳"},en:{"nav.projects":"Projects","nav.creative":"Creative","nav.skills":"Skills","nav.contact":"Contact","status":"Available within 1 month · Shenzhen, CN","meta":'19 · Independent Developer · AI Applications <span style="color:#a1a1aa">|</span> Self-taught during gap year',"bio":'Self-taught <strong>Python</strong> from scratch in 6 months. Independently delivered 4 working projects: a multi-platform DM aggregation desktop app, a local AI desktop pet (Windows + Android), a video auto-upload tool, and a DeepSeek conversation exporter. I care about AI in real-world scenarios — ran llama.cpp locally, reverse-engineered platform protocols, tricked React virtual lists with CSS hacks. Also produced an AI short drama and ran virtual character accounts across 9 platforms. No CS degree, but I ship.',"projects.title":"Projects","projects.dmshoot":"Multi-platform DM aggregation desktop app. Integrates Bilibili + Douyin DMs with DeepSeek multi-persona AI auto-reply. SQLite WAL 5-layer defense for message durability.","projects.hickhole":"Local AI pixel desktop pet. 26 robots with group physics simulation. Windows transparent layered window + Android APK with built-in llama.cpp JNI local inference.","projects.autosend":"One-click multi-platform video uploader. Forked upstream project, added desktop GUI, single-file EXE packaging, and visual login management across 5 platforms.","projects.export":"DeepSeek conversation bulk exporter. CSS hack tricks React virtual list into rendering all DOM nodes, with automatic integrity verification.","creative.title":"Creative & Ops","creative.drama":"Dust Star Project · AI Short Drama","creative.drama_desc":"Participated in producing the AI short drama \"Blind Date Maze\". Built the AI production pipeline from script generation to final cut, exploring industrialized AI-assisted content creation.","creative.virtual":"Virtual Character Operations","creative.virtual_desc":"Ran virtual character accounts across 9 video platforms, domestic and international. End-to-end automation from content creation to AI-powered DM replies.","skills.title":"Core Skills","skills.py_desktop":"Python Desktop Apps","skills.py_desktop_desc":"3 PySide6 projects from scratch to EXE. Glassmorphism UI, QThread multithreading, QPainter custom charts.","skills.ai_agent":"AI Agent Development","skills.ai_agent_desc":"LangChain + LangGraph Agent architecture, Qdrant vector DB, DeepSeek multi-persona engine, local llama.cpp inference.","skills.docker":"Docker & Deployment","skills.docker_desc":"Docker Compose managing Qdrant + AnythingLLM + Redis containers. WSL2 production deployment. Dockerfile multi-stage builds.","skills.api":"Multi-platform API","skills.api_desc":"Douyin Protobuf parsing, Bilibili HTTP polling, XHS signature reverse-engineering, Playwright automated login, plugin architecture with hot-swap.","skills.side":"From Python desktop apps, to AI Agent orchestration, to Docker deployment, to cross-platform API integration — these four pieces together are the complete pipeline I can independently deliver.","stack.title":"Tech Stack","now.title":"Now","now.job":"Seeking full-time AI application / Python backend roles in Shenzhen","now.tts":"Adding local TTS to HickHole's Android build","now.writing":"Writing up PySide6 project deep-dives as technical articles","contact.title":"Contact","footer":"Tujue · 2026 · Shenzhen"}};
+const i18n={zh:{"nav.projects":"项目","nav.creative":"创作","nav.skills":"能力","nav.gallery":"图册","nav.contact":"联系","meta":'独立开发者 · AI 应用方向',"bio":'独立开发者，关注 AI 在真实场景里的落地。做过 4 个可运行的项目：桌面端多平台私信聚合、本地 AI 桌宠（Windows + Android）、视频自动发布工具、DeepSeek 对话导出工具。折腾过 <strong>llama.cpp</strong> 本地推理、逆向过平台通信协议、用 CSS hack 绕过虚拟列表限制。也做过 AI 短剧，独立运营过 9 个平台的虚拟角色账号。',"projects.title":"项目案例","projects.dmshoot":"多平台私信聚合桌面应用。接入 B站 + 抖音私信，集成 DeepSeek 多角色 AI 自动回复，SQLite WAL 五层防御保障消息持久化。","projects.hickhole":"本地 AI 像素桌宠。26 只机器人群体物理模拟，Windows 透明分层窗口 + Android APK 内置 llama.cpp JNI 本地推理。","projects.autosend":"多平台视频一键发布工具。Fork 上游项目后为其添加桌面 GUI、单文件 EXE 打包和可视化登录管理，覆盖 5 个平台。","projects.export":"DeepSeek 对话全量导出工具。CSS hack 欺骗 React 虚拟列表渲染全部 DOM，自动校验导出完整性。","creative.title":"创作 & 运营","creative.drama":"尘星计划 · AI 短剧","creative.drama_desc":"参与制作 AI 短剧《相亲迷局》，负责从剧本生成到成片的 AI 生产管线搭建，探索 AI 辅助内容创作的工业化流程。","creative.virtual":"虚拟角色跨平台运营","creative.virtual_desc":"独立运营 9 个视频平台的虚拟角色账号，覆盖国内外主流平台。从内容创作到 AI 私信回复全链路自动化。","skills.title":"核心能力","skills.py_desktop":"Python 桌面应用","skills.py_desktop_desc":"3 个 PySide6 项目从零到打包 EXE，含毛玻璃 UI、QThread 多线程、QPainter 手写图表。","skills.ai_agent":"AI Agent 开发","skills.ai_agent_desc":"LangChain + LangGraph Agent 架构，Qdrant 向量库，DeepSeek 多角色引擎，本地 llama.cpp 推理。","skills.docker":"Docker & 部署","skills.docker_desc":"Docker Compose 管理 Qdrant + AnythingLLM + Redis 容器，WSL2 生产环境部署，Dockerfile 多阶段构建。","skills.api":"多平台 API 对接","skills.api_desc":"抖音 Protobuf 协议解析，B站 HTTP 轮询，小红书签名逆向，Playwright 自动化扫码，插件化架构支持热插拔。","skills.side":"从 Python 桌面端，到 AI Agent 编排，到 Docker 部署，再到跨平台 API 对接——这四块拼在一起，就是我能独立交付的完整链路。","stack.title":"技术栈","now.title":"当前动态","now.tts":"给 HickHole 的 Android 端加本地语音合成能力","now.writing":"把几个 PySide6 项目的研究过程整理成技术文章","contact.title":"联系","footer":"阿金 · 2026"},en:{"nav.projects":"Projects","nav.creative":"Creative","nav.skills":"Skills","nav.gallery":"Gallery","nav.contact":"Contact","meta":'Independent Developer · AI Applications',"bio":'Independent developer working on AI in real-world scenarios. Four shipped projects: a multi-platform DM aggregation desktop app, a local AI desktop pet (Windows + Android), a video auto-upload tool, and a DeepSeek conversation exporter. Ran llama.cpp locally, reverse-engineered platform protocols, tricked React virtual lists with CSS hacks. Also produced an AI short drama and ran virtual character accounts across 9 platforms.',"projects.title":"Projects","projects.dmshoot":"Multi-platform DM aggregation desktop app. Integrates Bilibili + Douyin DMs with DeepSeek multi-persona AI auto-reply. SQLite WAL 5-layer defense for message durability.","projects.hickhole":"Local AI pixel desktop pet. 26 robots with group physics simulation. Windows transparent layered window + Android APK with built-in llama.cpp JNI local inference.","projects.autosend":"One-click multi-platform video uploader. Forked upstream project, added desktop GUI, single-file EXE packaging, and visual login management across 5 platforms.","projects.export":"DeepSeek conversation bulk exporter. CSS hack tricks React virtual list into rendering all DOM nodes, with automatic integrity verification.","creative.title":"Creative & Ops","creative.drama":"Dust Star Project · AI Short Drama","creative.drama_desc":"Participated in producing the AI short drama \"Blind Date Maze\". Built the AI production pipeline from script generation to final cut, exploring industrialized AI-assisted content creation.","creative.virtual":"Virtual Character Operations","creative.virtual_desc":"Ran virtual character accounts across 9 video platforms, domestic and international. End-to-end automation from content creation to AI-powered DM replies.","skills.title":"Core Skills","skills.py_desktop":"Python Desktop Apps","skills.py_desktop_desc":"3 PySide6 projects from scratch to EXE. Glassmorphism UI, QThread multithreading, QPainter custom charts.","skills.ai_agent":"AI Agent Development","skills.ai_agent_desc":"LangChain + LangGraph Agent architecture, Qdrant vector DB, DeepSeek multi-persona engine, local llama.cpp inference.","skills.docker":"Docker & Deployment","skills.docker_desc":"Docker Compose managing Qdrant + AnythingLLM + Redis containers. WSL2 production deployment. Dockerfile multi-stage builds.","skills.api":"Multi-platform API","skills.api_desc":"Douyin Protobuf parsing, Bilibili HTTP polling, XHS signature reverse-engineering, Playwright automated login, plugin architecture with hot-swap.","skills.side":"From Python desktop apps, to AI Agent orchestration, to Docker deployment, to cross-platform API integration — these four pieces together are the complete pipeline I can independently deliver.","stack.title":"Tech Stack","now.title":"Now","now.tts":"Adding local TTS to HickHole's Android build","now.writing":"Writing up PySide6 project deep-dives as technical articles","contact.title":"Contact","footer":"Tujue · 2026"}};
 var currentLang='zh';
 function setLang(l){
   currentLang=l;
